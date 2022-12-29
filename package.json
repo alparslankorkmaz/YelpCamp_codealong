@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alpcaca111/YelpCamp_codealong.git"
+    "url": "git+https://github.com/alparslankorkmaz/YelpCamp_codealong.git"
   },
   "keywords": [],
   "author": "",
@@ -21,6 +21,7 @@
     "ejs": "^3.1.8",
     "ejs-mate": "github:nax3t/ejs-mate",
     "express": "^4.18.2",
+    "joi": "^17.7.0",
     "method-override": "^3.0.0",
     "mongoose": "^6.8.0"
   }
