@@ -17,6 +17,22 @@
         <li class="list-group-item">
           Submitted by <%= campground.author.username %>
         </li>
+        <li class="list-group-item" style="color: orange">
+          <div>
+            <% for(let i = 0; i < 5; i++) { %> 
+              <% if(i < floorRating) { %> 
+                <!-- display a full star -->
+                <i class="fa-solid fa-star"></i>
+              <% } else if((campground.avgRating - i) > 0 && (campground.avgRating - i) < 1) { %>
+                <!--display a half star  -->
+                <i class="fa-solid fa-star-half-stroke"></i>
+              <% } else { %> 
+                <!-- display an empty star -->
+                <i class="fa-regular fa-star"></i>
+              <% } %> 
+            <% } %> 
+          </div>
+        </li>
       </ul>
       <% if(currentUser && campground.author.equals(currentUser._id)) {%>
       <div class="card-body">
@@ -52,15 +68,6 @@
         <fieldset class="starability-checkmark">
           <input
             type="radio"
-            id="no-rate"
-            class="input-no-rate"
-            name="review[rating]"
-            value="1"
-            checked
-            aria-label="No rating."
-          />
-          <input
-            type="radio"
             id="first-rate1"
             name="review[rating]"
             value="1"
@@ -92,6 +99,7 @@
             id="first-rate5"
             name="review[rating]"
             value="5"
+            checked
           />
           <label for="first-rate5" title="Amazing">5 stars</label>
         </fieldset>
@@ -118,7 +126,7 @@
           Rated: <%= review.rating %> stars
         </p>
 
-        <p class="card-text">Review: <%= review.body %></p>
+        <p class="card-text"><%= review.body %></p>
         <% if(currentUser && review.author.equals(currentUser._id)) {%>
 
         <form

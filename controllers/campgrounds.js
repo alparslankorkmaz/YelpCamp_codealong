@@ -26,11 +26,12 @@ module.exports.showCampground = async (req, res) => {
       },
     })
     .populate("author");
+  const floorRating = campground.calculateAvgRating();
   if (!campground) {
     req.flash("error", "Cannot find that campground");
     return res.redirect("/campgrounds");
   }
-  res.render("campgrounds/show", { campground });
+  res.render("campgrounds/show", { campground, floorRating });
 };
 
 module.exports.renderEditForm = async (req, res) => {
