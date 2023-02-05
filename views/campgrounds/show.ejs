@@ -17,8 +17,8 @@
         <li class="list-group-item">
           Submitted by <%= campground.author.username %>
         </li>
-        <li class="list-group-item" style="color: orange">
-          <div>
+        <li class="list-group-item">
+          <div style="color: orange">
             <% for(let i = 0; i < 5; i++) { %> 
               <% if(i < floorRating) { %> 
                 <!-- display a full star -->
@@ -31,7 +31,8 @@
                 <i class="fa-regular fa-star"></i>
               <% } %> 
             <% } %> 
-          </div>
+            <span style="color: black"><%= campground.avgRating %></span>  
+          </div> 
         </li>
       </ul>
       <% if(currentUser && campground.author.equals(currentUser._id)) {%>
