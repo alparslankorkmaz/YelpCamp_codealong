@@ -4,7 +4,8 @@
   "description": "Coding along / first big project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon app.js",
+    "watch": "nodemon --ext *"
   },
   "repository": {
     "type": "git",
@@ -38,5 +39,8 @@
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^7.1.2",
     "sanitize-html": "^2.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.21"
   }
 }
