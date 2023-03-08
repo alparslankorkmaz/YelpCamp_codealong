@@ -73,6 +73,7 @@ const scriptSrcUrls = [
 ];
 const styleSrcUrls = [
   "https://kit-free.fontawesome.com/",
+  "https://kit.fontawesome.com/d2328aaada.css",
   "https://stackpath.bootstrapcdn.com/",
   "https://api.mapbox.com/",
   "https://api.tiles.mapbox.com/",
@@ -86,8 +87,12 @@ const connectSrcUrls = [
   "https://api.mapbox.com",
   "https://events.mapbox.com",
   "https://res.cloudinary.com/dh9omlcmh/",
+  "https://ka-f.fontawesome.com/",
 ];
-const fontSrcUrls = ["https://res.cloudinary.com/dh9omlcmh/"];
+const fontSrcUrls = [
+  "https://res.cloudinary.com/dh9omlcmh/",
+  "https://ka-f.fontawesome.com/",
+];
 
 app.use(
   helmet.contentSecurityPolicy({
