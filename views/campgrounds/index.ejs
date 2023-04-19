@@ -1,13 +1,13 @@
 <% layout('layouts/boilerplate') %>
 <div id="cluster-map"></div>
-<h1>All Campgrounds</h1>
+<h1 class="my-5">All Campgrounds</h1>
 <% for(let campground of campgrounds.reverse()) { %>
 <div class="card mb-3">
-  <div class="row">
+  <div class="row align-items-center">
     <div class="col-md-4">
       <% if(campground.image.length) { %>
       <img
-        class="img-fluid"
+        class="img-fluid rounded-4"
         alt=""
         src="<%= campground.image[0].url %>"
         crossorigin
